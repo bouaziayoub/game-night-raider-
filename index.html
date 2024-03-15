@@ -3,12 +3,92 @@
   <head>
     <title>Juego</title>
   </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .gamePanel {
+      display: none;
+    }
+
+    #datos_player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      /* height: 50vh; */
+    }
+
+    #datos_player input {
+      margin-bottom: 10px;
+    }
+
+    #ui {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    #fightScreen {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    #rival, #player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 10px;
+    }
+
+    #btnFight {
+      margin-top: 20px;
+    }
+
+    #btnRegister {
+      margin-top: 10px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+    
+  </style>
   <body>
     <h1>Night Raider</h1>
-    <div id="ui"></div>
-    <div id="fightScreen"></div>
-    <button id="btnFight">Enfrentarse a rival</button>
-    <!-- <button id="btnotro">Con otro jugador</button> -->
+    <div id="datos_player">
+      <h2>Registro</h2>
+      <input type="text" id="name" placeholder="Nombre" />
+     <buton id="btnRegister">Registrar</button>
+    </div>
+
+    <div class="gamePanel">
+      <div id="rival">
+        <h2>Rival</h2>
+        <p id="rivalName">Nombre:</p>
+        <p id="rivalHealth">Salud:</p>
+        <p id="rivalDamage">Daño:</p>
+        <p id="rivalHeal">Curación:</p>
+      </div>
+
+      <div id="player">
+        <h2>Player</h2>
+        <p id="playerName">Nombre:</p>
+        <p id="playerHealth">Salud:</p>
+        <p id="playerDamage">Daño:</p>
+        <p id="playerHeal">Curación:</p>
+      </div>
+
+      <div id="ui"></div>
+      <div id="fightScreen"></div>
+      <button id="btnFight">Enfrentarse a rival</button>
+    </div>
+    
+
     <script src="./js/main.js"></script>
+
   </body>
 </html>
